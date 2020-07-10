@@ -23,6 +23,7 @@ public class OrderHystrixController {
     private PaymentHystrixService paymentHystrixService;
 
     @GetMapping("/consumer/payment/hystrix/timeout/{id}")
+    //接口调用超过2秒，发生服务降级
 //    @HystrixCommand(fallbackMethod = "paymentInfo_TimeoutFallbackMethod",commandProperties = {
 //            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds",value = "2000")
 //    })
